@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Lock, Eye, EyeOff, X, ArrowLeft } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
 
 export default function Login() {
   const [isSignUp, setIsSignUp] = useState(false);
@@ -81,17 +82,14 @@ export default function Login() {
 
   return (
     <div className="fixed inset-0 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 overflow-hidden">
-      
-      <button 
-        className="absolute top-6 left-6 text-gray-600 hover:text-gray-900 transition-colors z-50 rounded-full p-2 hover:bg-gray-200"
-        onClick={() => console.log('Navigate back')}
-        title="Go back"
-      >
-        <ArrowLeft className="w-6 h-6" />
-      </button>
 
       <div className="w-full max-w-5xl h-[90vh] flex">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 bg-white rounded-2xl shadow-2xl overflow-hidden h-full">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-0 bg-white rounded-2xl shadow-2xl overflow-hidden h-full">
+          <NavLink to={'/'} className="absolute cursor-pointer text-white top-6 left-6 text-gray-600 hover:text-gray-900 transition-colors z-50 rounded-full p-2 hover:bg-gray-200"
+            onClick={() => console.log('Navigate back')}
+            title="Go back">
+                <ArrowLeft className="w-8 h-8" />
+          </NavLink>
           
           {/* Left Side - Decorative Section */}
           <div className="hidden md:flex flex-col justify-between p-8 bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 relative overflow-hidden">
