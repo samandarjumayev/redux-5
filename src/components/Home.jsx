@@ -1,80 +1,138 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, ShoppingCart, LogIn, Star, Users, Globe, Zap, Smartphone } from 'lucide-react';
+import { Search, ShoppingCart, Star, Users, Globe, Zap, Smartphone } from 'lucide-react';
+import Header from '../components/Header';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const courses = [
-    { id: 1, title: 'UI DESIGN FOR BEGINNERS', instructor: 'Adobe Illustrator Scratch Course', price: 26.92, originalPrice: 32.00, badge: 'NEW', badgeColor: 'bg-red-500' },
-    { id: 2, title: 'VUE JAVASCRIPT COURSE', instructor: 'Adobe Illustrator Scratch Course', price: 26.92, originalPrice: 32.00, badge: 'NEW', badgeColor: 'bg-blue-500' },
-    { id: 3, title: 'MOBILE DEV REACT NATIVE', instructor: 'Adobe Illustrator Scratch Course', price: 26.92, originalPrice: 32.00, badge: 'NEW', badgeColor: 'bg-green-500' },
-    { id: 4, title: 'WEBSITE DEV ZERO TO HERO', instructor: 'Adobe Illustrator Scratch Course', price: 26.92, originalPrice: 32.00, badge: 'NEW', badgeColor: 'bg-purple-500' },
+    { 
+      id: 1, 
+      title: 'UI DESIGN FOR BEGINNERS', 
+      instructor: 'Adobe Illustrator Scratch Course', 
+      price: 26.92, 
+      originalPrice: 32.00, 
+      badge: 'NEW', 
+      badgeColor: 'bg-red-500', 
+      cardBg: 'bg-red-500',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop'
+    },
+    { 
+      id: 2, 
+      title: 'VUE JAVASCRIPT COURSE', 
+      instructor: 'Adobe Illustrator Scratch Course', 
+      price: 26.92, 
+      originalPrice: 32.00, 
+      badge: 'NEW', 
+      badgeColor: 'bg-blue-500', 
+      cardBg: 'bg-blue-500',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=300&fit=crop'
+    },
+    { 
+      id: 3, 
+      title: 'MOBILE DEV REACT NATIVE', 
+      instructor: 'Adobe Illustrator Scratch Course', 
+      price: 26.92, 
+      originalPrice: 32.00, 
+      badge: 'NEW', 
+      badgeColor: 'bg-green-500', 
+      cardBg: 'bg-green-500',
+      image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=300&fit=crop'
+    },
+    { 
+      id: 4, 
+      title: 'WEBSITE DEV ZERO TO HERO', 
+      instructor: 'Adobe Illustrator Scratch Course', 
+      price: 26.92, 
+      originalPrice: 32.00, 
+      badge: 'NEW', 
+      badgeColor: 'bg-purple-500', 
+      cardBg: 'bg-purple-500',
+      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=300&fit=crop'
+    },
   ];
 
   const trendingCourses = [
-    { id: 5, title: 'Design Fundamentals', instructor: 'Professional Design', price: 26.92, rating: 4.5, students: 1200 },
-    { id: 6, title: 'Ionic - Build iOS, Android & Web...', instructor: 'Web Development', price: 26.92, rating: 4.8, students: 2100 },
-    { id: 7, title: 'Masterclass in Design Thinking', instructor: 'Design Course', price: 26.92, rating: 4.9, students: 3000 },
-    { id: 8, title: 'Bootcamp: Vue.js Web Framework', instructor: 'Web Development', price: 26.92, rating: 4.7, students: 1500 },
+    { 
+      id: 5, 
+      title: 'Design Fundamentals', 
+      instructor: 'Professional Design', 
+      price: 26.92, 
+      rating: 4.5, 
+      students: 1200,
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=300&fit=crop'
+    },
+    { 
+      id: 6, 
+      title: 'Ionic - Build iOS, Android & Web...', 
+      instructor: 'Web Development', 
+      price: 26.92, 
+      rating: 4.8, 
+      students: 2100,
+      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop'
+    },
+    { 
+      id: 7, 
+      title: 'Masterclass in Design Thinking', 
+      instructor: 'Design Course', 
+      price: 26.92, 
+      rating: 4.9, 
+      students: 3000,
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop'
+    },
+    { 
+      id: 8, 
+      title: 'Bootcamp: Vue.js Web Framework', 
+      instructor: 'Web Development', 
+      price: 26.92, 
+      rating: 4.7, 
+      students: 1500,
+      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop'
+    },
   ];
 
   const webinars = [
-    { id: 9, title: 'iOS 13 SWIFT & iOS DEVELOPMENT', badge: 'NEW' },
-    { id: 10, title: 'Bootcamp: Vue.js Web Framework', badge: 'LIVE' },
-    { id: 11, title: 'WEBSITE DEV ZERO TO HERO', badge: 'NEW' },
-    { id: 12, title: 'LEARN PROGRAM IN 30 DAYS', badge: 'LIVE' },
+    { 
+      id: 9, 
+      title: 'iOS 13 SWIFT & iOS DEVELOPMENT', 
+      badge: 'NEW', 
+      bgColor: 'bg-yellow-400',
+      image: 'https://images.unsplash.com/photo-1547658528-b591f3c1fbf2?w=500&h=300&fit=crop'
+    },
+    { 
+      id: 10, 
+      title: 'Bootcamp: Vue.js Web Framework', 
+      badge: 'LIVE', 
+      bgColor: 'bg-gray-700',
+      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop'
+    },
+    { 
+      id: 11, 
+      title: 'WEBSITE DEV ZERO TO HERO', 
+      badge: 'NEW', 
+      bgColor: 'bg-purple-500',
+      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop'
+    },
+    { 
+      id: 12, 
+      title: 'LEARN PROGRAM IN 30 DAYS', 
+      badge: 'LIVE', 
+      bgColor: 'bg-blue-400',
+      image: 'https://images.unsplash.com/photo-1547658528-b591f3c1fbf2?w=500&h=300&fit=crop'
+    },
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">M</span>
-              </div>
-              <span className="font-bold text-gray-800">MyCourse.io</span>
-            </div>
-
-            {/* Search Bar */}
-            <div className="hidden md:flex flex-1 max-w-md mx-8">
-              <div className="relative w-full">
-                <input
-                  type="text"
-                  placeholder="Search for course"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
-                />
-                <Search className="absolute right-3 top-2.5 w-5 h-5 text-gray-400" />
-              </div>
-            </div>
-
-            {/* Right Actions */}
-            <div className="flex items-center gap-4">
-              <ShoppingCart className="w-5 h-5 text-gray-600 cursor-pointer" />
-              <button className="px-4 py-2 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50">
-                Login
-              </button>
-              <button className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600">
-                Sign Up
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white py-32 overflow-hidden">
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-30 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/placeholder.svg?height=600&width=1200&query=student-learning-headphones)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop)',
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -124,7 +182,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {courses.map((course) => (
               <div key={course.id} className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-                <div className={`${course.badgeColor} h-32 relative flex items-end p-4`}>
+                <div 
+                  className={`${course.cardBg} h-40 relative flex items-center justify-center text-white font-bold text-xl overflow-hidden`}
+                >
+                  <img 
+                    src={course.image || "/placeholder.svg"} 
+                    alt={course.title}
+                    className="w-full h-full object-cover"
+                  />
                   <span className="absolute top-3 right-3 bg-white text-gray-800 px-2 py-1 rounded text-xs font-bold">
                     {course.badge}
                   </span>
@@ -163,7 +228,7 @@ export default function Home() {
           </div>
           <div className="hidden lg:block">
             <div className="w-48 h-48">
-              <img src="/colorful-geometric-shapes.jpg" alt="Colorful shapes" className="w-full h-full object-cover rounded-full opacity-50" />
+              <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=300&h=300&fit=crop" alt="Colorful shapes" className="w-full h-full object-cover rounded-full opacity-60" />
             </div>
           </div>
         </div>
@@ -180,7 +245,7 @@ export default function Home() {
               <div
                 className="h-64 bg-cover bg-center relative"
                 style={{
-                  backgroundImage: 'url(/placeholder.svg?height=400&width=350&query=professional-woman)',
+                  backgroundImage: `url(${trendingCourses[2].image})`,
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-6 text-white">
@@ -194,7 +259,12 @@ export default function Home() {
             <div className="lg:col-span-2 grid grid-cols-2 gap-6">
               {trendingCourses.slice(0, 4).map((course) => (
                 <div key={course.id} className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-                  <div className="h-32 bg-gradient-to-r from-green-400 to-green-600" />
+                  <div
+                    className="h-32 bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url(${course.image})`,
+                    }}
+                  />
                   <div className="p-4">
                     <h3 className="font-bold text-sm mb-2">{course.title}</h3>
                     <p className="text-gray-600 text-xs mb-2">{course.instructor}</p>
@@ -205,7 +275,7 @@ export default function Home() {
                       </div>
                       <div className="flex items-center gap-1 text-gray-600">
                         <Users className="w-3 h-3" />
-                        <span>{course.students}</span>
+                        <span>{course.students}k</span>
                       </div>
                     </div>
                     <div className="mt-3 font-bold text-gray-900">${course.price}</div>
@@ -226,16 +296,15 @@ export default function Home() {
             {webinars.map((webinar) => (
               <div key={webinar.id} className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition">
                 <div
-                  className="h-32"
+                  className={`${webinar.bgColor} h-32 bg-cover bg-center`}
                   style={{
-                    backgroundImage: `url(/placeholder.svg?height=150&width=350&query=${webinar.badge === 'LIVE' ? 'purple' : 'yellow'}-webinar-banner)`,
-                    backgroundSize: 'cover',
+                    backgroundImage: `url(${webinar.image})`,
                   }}
                 />
                 <div className="p-4">
                   <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-bold text-sm">{webinar.title}</h3>
-                    <span className={`text-xs font-bold px-2 py-1 rounded ${
+                    <h3 className="font-bold text-sm flex-1">{webinar.title}</h3>
+                    <span className={`text-xs font-bold px-2 py-1 rounded whitespace-nowrap ml-2 ${
                       webinar.badge === 'LIVE' ? 'bg-purple-100 text-purple-700' : 'bg-yellow-100 text-yellow-700'
                     }`}>
                       {webinar.badge}
