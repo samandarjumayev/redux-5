@@ -154,9 +154,15 @@ export default function Home() {
               />
               <select className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
                 <option>Categories</option>
+                <option>Frontend</option>
+                <option>Backend</option>
+                <option>FullStack</option>
               </select>
               <select className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
                 <option>Topic</option>
+                <option>React JS</option>
+                <option>Node JS</option>
+                <option>Vue JS</option>
               </select>
               <button className="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 flex items-center gap-2 whitespace-nowrap">
                 <Search className="w-4 h-4" />

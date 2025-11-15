@@ -5,6 +5,8 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './components/Home.jsx'
 import Search from './components/Search.jsx'
+import Login from './components/Login.jsx'
+import Profile from './components/Profile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,8 +20,16 @@ const router = createBrowserRouter([
       {
         path: '/allproducts',
         element: <Search />
+      },
+      {
+        path: 'profile',
+        element: <Profile />
       }
     ]
+  },
+  {
+    path: '/login',
+    element: <Login />
   }
 ])
 

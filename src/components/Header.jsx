@@ -27,12 +27,12 @@ export default function Header() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-4">
-          <NavLink to={'/allproducts'} className={`px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 text-sm font-medium`}>All Products</NavLink>
+          <NavLink to={'/allproducts'} className={`px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 text-sm font-medium  transition-all duration-200 active:duration-70 active:scale-90`}>All Products</NavLink>
           <ShoppingCart className="text-gray-600 cursor-pointer" size={20} />
-          <button className="px-4 py-2 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm">
+          <NavLink to={'/login'} className="px-4 py-2 text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 text-sm cursor-pointer transition-all duration-200 active:duration-70 active:scale-90">
             Login
-          </button>
-          <button className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 text-sm font-medium">
+          </NavLink>
+          <button className="px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 text-sm font-medium cursor-pointer transition-all duration-200 active:duration-70 active:scale-90">
             Sign Up
           </button>
         </div>
