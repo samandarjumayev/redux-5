@@ -17,7 +17,7 @@ export default function Home() {
       badge: 'NEW', 
       badgeColor: 'bg-red-500', 
       cardBg: 'bg-red-500',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/695730/pexels-photo-695730.jpeg'
     },
     { 
       id: 2, 
@@ -28,7 +28,7 @@ export default function Home() {
       badge: 'NEW', 
       badgeColor: 'bg-blue-500', 
       cardBg: 'bg-blue-500',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/11035366/pexels-photo-11035366.jpeg'
     },
     { 
       id: 3, 
@@ -39,7 +39,7 @@ export default function Home() {
       badge: 'NEW', 
       badgeColor: 'bg-green-500', 
       cardBg: 'bg-green-500',
-      image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/7213434/pexels-photo-7213434.jpeg'
     },
     { 
       id: 4, 
@@ -50,7 +50,7 @@ export default function Home() {
       badge: 'NEW', 
       badgeColor: 'bg-purple-500', 
       cardBg: 'bg-purple-500',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg'
     },
   ];
 
@@ -62,7 +62,7 @@ export default function Home() {
       price: 26.92, 
       rating: 4.5, 
       students: 1200,
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/3747279/pexels-photo-3747279.jpeg'
     },
     { 
       id: 6, 
@@ -71,7 +71,7 @@ export default function Home() {
       price: 26.92, 
       rating: 4.8, 
       students: 2100,
-      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/7568297/pexels-photo-7568297.jpeg'
     },
     { 
       id: 7, 
@@ -80,7 +80,7 @@ export default function Home() {
       price: 26.92, 
       rating: 4.9, 
       students: 3000,
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop'
+      image: 'https://images.pexels.com/photos/5428833/pexels-photo-5428833.jpeg'
     },
     { 
       id: 8, 
@@ -89,7 +89,7 @@ export default function Home() {
       price: 26.92, 
       rating: 4.7, 
       students: 1500,
-      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/33607952/pexels-photo-33607952.png'
     },
   ];
 
@@ -99,28 +99,28 @@ export default function Home() {
       title: 'iOS 13 SWIFT & iOS DEVELOPMENT', 
       badge: 'NEW', 
       bgColor: 'bg-yellow-400',
-      image: 'https://images.unsplash.com/photo-1547658528-b591f3c1fbf2?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg'
     },
     { 
       id: 10, 
       title: 'Bootcamp: Vue.js Web Framework', 
       badge: 'LIVE', 
       bgColor: 'bg-gray-700',
-      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/4439901/pexels-photo-4439901.jpeg'
     },
     { 
       id: 11, 
       title: 'WEBSITE DEV ZERO TO HERO', 
       badge: 'NEW', 
       bgColor: 'bg-purple-500',
-      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg'
     },
     { 
       id: 12, 
       title: 'LEARN PROGRAM IN 30 DAYS', 
       badge: 'LIVE', 
       bgColor: 'bg-blue-400',
-      image: 'https://images.unsplash.com/photo-1547658528-b591f3c1fbf2?w=500&h=300&fit=crop'
+      image: 'https://images.pexels.com/photos/4709289/pexels-photo-4709289.jpeg'
     },
   ];
 
@@ -132,7 +132,7 @@ export default function Home() {
         <div
           className="absolute inset-0 opacity-30 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop)',
+            backgroundImage: 'url(https://images.pexels.com/photos/2330137/pexels-photo-2330137.jpeg)',
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -243,7 +243,7 @@ export default function Home() {
             {/* Featured Course */}
             <div className="lg:col-span-1 rounded-lg overflow-hidden shadow-lg">
               <div
-                className="h-64 bg-cover bg-center relative"
+                className="h-full bg-cover bg-center relative"
                 style={{
                   backgroundImage: `url(${trendingCourses[2].image})`,
                 }}
@@ -326,54 +326,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">M</span>
-                </div>
-                <span className="font-bold">MyCourse.io</span>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-3">Programming</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Web Programming</a></li>
-                <li><a href="#" className="hover:text-white">Mobile Programming</a></li>
-                <li><a href="#" className="hover:text-white">Java Beginner</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-3">Design</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Adobe Illustrator</a></li>
-                <li><a href="#" className="hover:text-white">Adobe Photoshop</a></li>
-                <li><a href="#" className="hover:text-white">Design Logo</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-3">Courses</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Writing Course</a></li>
-                <li><a href="#" className="hover:text-white">Photography</a></li>
-                <li><a href="#" className="hover:text-white">Video Making</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 pt-8 flex justify-between items-center">
-            <p className="text-sm">Copyright © MyCourse 2024. All Rights Reserved</p>
-            <div className="flex gap-4">
-              <Globe className="w-5 h-5 cursor-pointer hover:text-white" />
-              <Zap className="w-5 h-5 cursor-pointer hover:text-white" />
-              <Smartphone className="w-5 h-5 cursor-pointer hover:text-white" />
-            </div>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 }
